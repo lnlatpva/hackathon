@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "udt-calc"
+version = "0.6.1"
+description = "UDT deterministic manufacturing calculation kernel"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.7,<3", "networkx>=3.2,<4"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+api = ["fastapi>=0.110,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

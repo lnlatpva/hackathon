@@ -1,0 +1,48 @@
+{
+  "dataset_id": "factory-processes-documentary-baseline",
+  "dataset_type": "confirmed_source_excerpt_not_calculation_ready",
+  "product": {
+    "name": "Пульт управления регулятора давления газа",
+    "source": "0. Общее описание Фабрики процессов, стр. 1"
+  },
+  "shift": {
+    "duration_seconds": 1200,
+    "target_finished_units": 10,
+    "specified_takt_seconds": 120,
+    "available_production_seconds": null,
+    "source": "0. Общее описание Фабрики процессов, стр. 1"
+  },
+  "workstations": {
+    "assembly_count": 9,
+    "quality_inspection_station_number": 10,
+    "source": "0. Общее описание Фабрики процессов + 1. Комплектация рабочих мест"
+  },
+  "first_round_transport": {
+    "batch_size": 2,
+    "container_required": true,
+    "uses_cart": true,
+    "requires_operator_request": true,
+    "actual_transport_duration_seconds": null,
+    "source": "0. Общее описание Фабрики процессов + 3. Стандарты выполнения операций (логист)"
+  },
+  "operation_8": {
+    "name": "Установка 6 болтов в пульт управления",
+    "raw_steps": [
+      {"step": 1, "raw_time_value": 170, "raw_time_unit": null},
+      {"step": 2, "raw_time_value": 1, "raw_time_unit": null}
+    ],
+    "sum_of_raw_values": 171,
+    "normalized_cycle_seconds": null,
+    "actual_cycle_seconds": null,
+    "source": "3. Стандарты выполнения операций, PDF стр. 15"
+  },
+  "missing": [
+    "verified_unit_and_basis_of_standard_step_times",
+    "actual_operation_timings",
+    "complete_verified_material_flow_edges",
+    "material_wait_times",
+    "interoperation_transport_timings",
+    "complete_financial_inputs",
+    "actual_shift_output_and_acceptance"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "placeholder-id-replaced-by-backend",
+  "target_id": "C",
+  "assume_independent_resources": true,
+  "nodes": [
+    {"id":"A","name":"Synthetic branch A","kind":"operation","processing_seconds":{"value":"20","unit":"s","source":{"kind":"synthetic_test_fixture","reference":"demo:branch-A","confirmed":true}},"batch_size":1,"units_per_finished":"1","parallel_channels":1,"available_seconds":{"value":"1200","unit":"s","source":{"kind":"synthetic_test_fixture","reference":"demo:shift","confirmed":true}}},
+    {"id":"B","name":"Synthetic branch B","kind":"operation","processing_seconds":{"value":"30","unit":"s","source":{"kind":"synthetic_test_fixture","reference":"demo:branch-B","confirmed":true}},"batch_size":1,"units_per_finished":"1","parallel_channels":1,"available_seconds":{"value":"1200","unit":"s","source":{"kind":"synthetic_test_fixture","reference":"demo:shift","confirmed":true}}},
+    {"id":"C","name":"Synthetic assembly C","kind":"operation","processing_seconds":{"value":"10","unit":"s","source":{"kind":"synthetic_test_fixture","reference":"demo:merge-C","confirmed":true}},"batch_size":1,"units_per_finished":"1","parallel_channels":1,"available_seconds":{"value":"1200","unit":"s","source":{"kind":"synthetic_test_fixture","reference":"demo:shift","confirmed":true}}}
+  ],
+  "edges": [
+    {"id":"A-C","source_id":"A","target_id":"C","kind":"material","verification":"confirmed","transit_seconds":{"value":"0","unit":"s","source":{"kind":"synthetic_test_fixture","reference":"demo:zero-transit","confirmed":true}},"waiting_seconds":{"value":"0","unit":"s","source":{"kind":"synthetic_test_fixture","reference":"demo:zero-wait","confirmed":true}}},
+    {"id":"B-C","source_id":"B","target_id":"C","kind":"material","verification":"confirmed","transit_seconds":{"value":"0","unit":"s","source":{"kind":"synthetic_test_fixture","reference":"demo:zero-transit","confirmed":true}},"waiting_seconds":{"value":"0","unit":"s","source":{"kind":"synthetic_test_fixture","reference":"demo:zero-wait","confirmed":true}}}
+  ],
+  "resources": [],
+  "resource_uses": []
+}
